@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -7,9 +8,12 @@ class SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    return Padding(
+      padding: EdgeInsets.only(bottom: 16.h),
+      child: Text(
+        title,
+        style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

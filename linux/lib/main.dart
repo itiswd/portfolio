@@ -13,16 +13,19 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(1440, 1024), // Base screen size
+      designSize: const Size(1440, 1024),
       minTextAdapt: true,
-      builder: (_, __) => MaterialApp(
-        title: 'Ibrahim Tharwat Portfolio',
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme.light,
-        darkTheme: AppTheme.dark,
-        themeMode: ThemeMode.system,
-        home: const HomePage(),
-      ),
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Ibrahim Tharwat Portfolio',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.light,
+          darkTheme: AppTheme.dark,
+          themeMode: ThemeMode.system,
+          home: child,
+        );
+      },
+      child: const HomePage(),
     );
   }
 }
